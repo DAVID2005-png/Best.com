@@ -45,7 +45,9 @@
             margin: 0 auto;
             padding: 20px 0;
         }
-
+        .coin{
+            display: none;
+        }
         /* --- Header --- */
         header {
             background-color: var(--surface-color);
@@ -546,22 +548,32 @@
            */
             .user-stats {
                 position: absolute;
+                right: 6.8rem;
                 margin-top: 10px;
-                text-align: center;
                 width: 100%;
+                align-items: center;
             }
             #menu-bars{
                 display: block;
                 position: absolute;
-                right: 1.2rem;
+                right: .5rem;
                 top: 1.1rem;
                 z-index: 1000;
             }
-            .logo{
+            .coin{
+                display: block;
+                width: 3.5rem;
+                height: 3.5rem;
                 position: absolute;
-                left: 1.5rem;
+                left: 1rem;
+                border-radius: 100%;
+            }
+            .logo{
+                /* position: absolute;
+                left: .2rem;
                 top: 1.5rem;
-                z-index: 1000;
+                z-index: 1000; */
+                display: none;
             }
             .stats-overview {
                 flex-direction: column;
@@ -596,7 +608,6 @@
             #home-page .hero p { font-size: 1em; }
             .auth-form-container { padding: 20px; }
         }
-
     </style>
 </head>
 <body>
@@ -674,9 +685,10 @@
     <div id="app-container">
         <header>
             <div class="container">
+                <img src="images.jpg" class="coin" alt="">
                 <div class="logo">COIN<span>Invest</span></div>
                 <div class="user-stats">
-                    Utilisateurs: <span id="active-users-count">1,250,000</span><br>
+                    Utilisateurs Actifs: <span id="active-users-count">1,250,000</span><br>
                     Total Investi: <span id="total-invested-amount">$2,000,000</span>
                 </div>
                 <nav class="navbar">
